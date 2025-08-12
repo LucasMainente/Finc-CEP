@@ -1,41 +1,28 @@
-import { StyleSheet, Text, TextInput, View } from "react-native";
 
+import { StyleSheet, Text, TextInput, View } from "react-native"
 
-const Input = () => {
+export const Input = () => {
     return (
-        <>
-            <View style={styles.campoInput}>
-                <Text style={styles.label}>CEP</Text>
-                <TextInput
-                    type="text"
-                    name="cep"
-                    placeholder="00000-000"
-                    pattern="[0-9]"
-                    required
-                    maxLength={9}
-                ></TextInput>
-            </View>
-        </>
+        <View style={StyleSheet.campoInput}>
+            <Text style={styles.label}> CEP </Text>
+            <TextInput
+                placeholder="00000-000"
+                style={styles.input}
+                maxLength={8}
+            ></TextInput>
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
-
     campoInput: {
-        width: `50%`,
-        padding: 5,
-
+        width: '70%'
     },
     input: {
         borderBottomWidth: 1,
-        borderBottomColor: '#939393',
+        borderBottomColor: '#999999',
         color: '#939393',
         padding: 5,
-        outline: 'none'
+        outlineStyle: 'none'
     }
-
-
-
 })
-
-export default Input;

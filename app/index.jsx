@@ -1,6 +1,7 @@
-import Input from '../assets/components/input/input.jsx';
-import { Image, ImageBackground, StyleSheet, View, Text, } from "react-native";
 
+import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
+import { Input } from '../assets/components/input/input';
+import { Botao } from '../assets/components/botao/botao';
 
 export default function Index() {
   return (
@@ -8,27 +9,27 @@ export default function Index() {
       {/* 1. Logo + Imagem de fundo */}
       <ImageBackground source={require('../assets/images/ImgFundo.png')}
         style={styles.imgFundo}>
-      </ImageBackground>
-          
-        
-
-        <View style={styles.container}>
-          <Image source={require('../assets/images/Group 6.png')}
+        <Image source={require('../assets/images/Group 6.png')}
           style={styles.logo}>
         </Image>
-          <Text style={styles.titulo}>Consulte seu CEP</Text>
-          
-          <Input/>
-          
-        </View>
+      </ImageBackground>
 
-      
       {/* 2. Campo de consulta */}
-      {/* 2.1. Título */}
-      {/* 2.2. Input */}
-      {/* 2.3. Botão */}
-      {/* 2.4. Card de informações */}
+      <View style={styles.container} >
+
+        {/* 2.1. Título */}
+        <Text style={styles.titulo}> Consulte seu CEP </Text>
+
+        {/* 2.2. Input */}
+        <Input />
+
+        {/* 2.3. Botão */}
+        <Botao tituloBotao='Consultar'/>
+
+        {/* 2.4. Card de informações */}
+      </View>
     </>
+
   );
 }
 
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: 100,
-    height: 120,
+    height: 120
   },
   container: {
     flex: 1.5,
@@ -52,8 +53,7 @@ const styles = StyleSheet.create({
     paddingBottom: 50,
     gap: 40
   },
-  titulo:{
+  titulo: {
     fontSize: 25,
-    marginBottom: 10,
   }
-}) 
+})
