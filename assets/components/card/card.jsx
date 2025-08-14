@@ -1,37 +1,29 @@
 import { StyleSheet, Text, View } from "react-native";
 import { ScrollView } from "react-native";
 
-export const Card = () => {
+export const Card = ({cep,logradouro,bairro,estado}) => {
     return (
         <View style={styles.cardContainer} showsVerticalScrollIndicator={false}>
             <Text style={styles.tituloCard}>Dados do CEP</Text>
 
 
             <View style={styles.cardDados}>
-                <Text style={styles.tituloValor}>CEP:</Text>
-                <Text>Dado 1</Text>
+                <Text style={styles.tituloValor}>Cep:</Text>
+                <Text>{cep}</Text>
             </View>
             <View style={styles.cardDados}>
                 <Text style={styles.tituloValor}>Logradouro:</Text>
-                <Text>Dado 2</Text>
+                <Text>{logradouro}</Text>
             </View>
             <View>
-                <Text style={styles.tituloValor}> UF:</Text>
-                <Text> Dado 3</Text>
+                <Text style={styles.tituloValor}>Bairro:</Text>
+                <Text>{bairro}</Text>
             </View>
             <View style={styles.cardDados}>
                 <Text style={styles.tituloValor}>Estado:</Text>
-                <Text>Dado 4</Text>
+                <Text>{estado}</Text>
             </View>
-            <View style={styles.cardDados}>
-                <Text style={styles.tituloValor}>Região:</Text>
-                <Text>Dado 5
-
-
-                     
-                </Text>
-
-            </View>
+            
         </View>
     );
 }

@@ -1,31 +1,32 @@
+
 import { StyleSheet, Text, TextInput, View } from "react-native"
 
-export const Input = () => {
+
+export const Input = ({valorCep, onChangeValorCep}) => {
     return (
         <View style={styles.campoInput}>
-            <Text style={styles.label}> CEP </Text>
-            <TextInput
-                placeholder="00000-000"
+            <Text style={styles.label}>CEP</Text>
+            <TextInput placeholder="00000-000"
                 style={styles.input}
                 maxLength={8}
-            />
+
+                value={valorCep}
+                onChangeText={onChangeValorCep}>
+        </TextInput>
         </View>
     )
 }
-
 const styles = StyleSheet.create({
     campoInput: {
-        width: '70%',
-        alignItems: 'center',
-    },
-    label: {
-        marginBottom: 5
+        width: '70%'
     },
     input: {
-        width: '95%',
         borderBottomWidth: 1,
-        borderBottomColor: '#999999',
-        color: '#000000',
-        padding: 5
+        borderBottomColor: '#939393',
+        color: '#939393',
+        padding: 5,
+        outlineStyle: 'none'
+
     }
+
 })
