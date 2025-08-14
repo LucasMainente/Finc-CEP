@@ -13,7 +13,7 @@ export const Botao = ({tituloBotao}) => {
 
 const styles = StyleSheet.create({
     botao:{
-        backgroundColor: '#00AAEE',
+        backgroundColor: '#1bbcfbff',
         borderTopLeftRadius: 10,
         borderBottomLeftRadius: 10,
         borderBottomRightRadius: 10,
